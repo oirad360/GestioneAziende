@@ -1,0 +1,26 @@
+section{
+    font-family: 'Raleway',sans-serif;
+    padding: 20px 18%;
+    color: black;
+    flex-grow: 1;
+}
+button:hover{
+    cursor: pointer;
+}
+#ordina{
+    border-radius: 5px;
+    width: 120px;
+    line-height: 50px;
+    font-size:30px;
+    text-align: center;
+}
+
+#ordina:hover{
+    background-color: rgba(0, 0, 0, 0.199);
+}
+
+@media(max-width:800px){
+    section{
+        padding: 20px 10%;
+    } 
+}

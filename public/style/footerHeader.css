@@ -1,0 +1,399 @@
+body{
+    margin: 0px;
+    display: flex;
+    flex-direction: column; /*predispone header, section e footer in colonna*/
+    height: 100vh; /*ha altezza fissata a 100% della viewport per occupare tutto lo schermo*/
+}
+
+header{
+    font-family: 'Oxygen', sans-serif;
+    background-image: url(../assets/sfondoHeader.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y:15%;
+    color:white;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    flex-shrink: 0; /*è 0 per non far rimpicciolire l'header man mano che si allarga la section inserendogli contenuti*/
+}
+
+@media(max-width: 520px){
+    header{
+        height: 175px;
+    }
+}
+
+.overlay{
+    position: absolute;
+    top:0px;
+    height: 100%;
+    width:100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+}
+
+nav{
+    font-family: 'Roboto', sans-serif;
+    height: 30%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1;
+    flex-shrink: 0;
+}
+
+#searchButton{
+    cursor:pointer;
+    max-width:70px;
+    max-height: 70px;
+}
+
+#titolo{
+    font-size: 55px;
+    font-weight: 600;
+    font-style: italic;
+    margin:27px 0px;
+    z-index: 1;
+}
+
+@media(max-width: 520px){
+
+    #searchButton{
+        max-width: 55px;
+        max-height: 55px;
+    }
+
+    #titolo{
+        margin:20px;
+        font-size: 26px;
+    }
+}
+
+
+nav a{
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    text-decoration: none;
+}
+
+
+nav a:hover{
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+header a{
+    z-index: 1;
+    text-decoration: none;
+    cursor:pointer;
+}
+.profile{
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 40px;
+}
+.profile:hover{
+    background-color: rgba(255, 255, 255, 0.6);
+}
+.profile p{
+    margin:0px;
+    font-size:20px;
+    color:white;
+}
+.propic{
+    border-radius: 100%;
+    width: 75px;
+    height: 75px;
+    margin-right: 5px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+#carrello{
+    background-image: url(../assets/carrello.png);
+    width: 75px;
+    height: 75px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    z-index: 1;
+}
+
+#countCarrello{
+    text-align: center;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    color: white;
+    background-color: red;
+    position: absolute;
+    top:0px;
+    left:0px;
+}
+@media(max-width: 520px){
+    .propic{
+        width: 45px;
+        height: 45px;
+    }
+    .profile{
+        padding: 3px;
+    }
+    #carrello{
+        width:45px;
+        height:45px;
+        bottom:4px;
+        right:4px;
+    }
+    #countCarrello{
+        top:-3px;
+        left:-3px;
+    }
+}
+
+#sideNav{
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(39, 97, 151, 0.9);
+    height: 100vh;
+    width: 500px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index:2;
+    color:white;
+    overflow-y: auto;
+}
+.user a{
+    text-decoration: none;
+    color: white;
+}
+@media(max-width: 520px){
+    #sideNav{
+        width:90%;
+    }
+}
+#sideNav input{
+    margin: 10px;
+    margin-top: 5px;
+}
+.separator{
+    display:flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.205);
+    margin-bottom: 5px;
+    height: 60px;
+}
+.separator img{
+    max-height: 30px;
+    max-width: 30px;
+    margin-left: 10px;
+}
+.separator div{
+    margin-left: 10px;
+}
+#close{
+    font-size:50px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+#prodottiSide, #utentiSide{
+    max-height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+@media(max-width:520px){
+    #prodottiSide, #utentiSide{
+        max-height: 60%;
+    }
+}
+#firstSeparator{
+    display: flex;
+    justify-content: space-between;
+}
+#group{
+    display: flex;
+    align-items: center;
+    margin:0px;
+}
+
+#sideNav form{
+    font-size:13px;
+    margin-bottom:10px;
+    margin-left:10px;
+}
+form[name="formSide"] select{
+    width: 100px;
+}
+
+.bloccoSide{
+    background-color: rgba(230, 230, 230, 0.747);
+    padding:5px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:10px;
+    border-radius: 5px;
+}
+
+.nonDisponibileSide{
+    background-color: rgba(199, 40, 40, 0.753);
+}
+
+.inArrivoSide{
+    background-color: rgba(216, 185, 48, 0.705)
+}
+
+.bloccoSide img{
+    max-width: 100px;
+    max-height: 126px;
+}
+.bloccoSide div{
+    margin: 0px;
+}
+.bloccoSide p,.bloccoSide h1{
+    width: 110px;
+    margin:0px;
+}
+.bloccoSide h1{
+    font-size: 16px;
+}
+.bloccoSide p{
+    font-size: 12px;
+}
+
+#sideNav .containerProdotti{
+    text-align: center;
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.capovolgi{
+    transform: scaleY(-1);
+}
+
+#mostraProdotti:hover,#mostraUtenti:hover{
+    cursor:pointer;
+}
+
+.bottoneWishlist{
+    background-image: url(../assets/cuorevuoto.png);
+    height:20px;
+    width:20px;
+}
+
+.bottoneWishlist:hover{
+    background-image: url(../assets/cuore.png);
+    cursor: pointer;
+}
+
+.bottoneRimuoviWishlist{
+    background-image: url(../assets/cuore.png);
+    height:20px;
+    width:20px;
+}
+
+.bottoneRimuoviWishlist:hover{
+    background-image: url(../assets/cuoretagliato.png);
+    cursor: pointer;
+}
+.aggiungiCarrello{
+    background-color: rgb(0, 132, 255);
+    border-radius: 5px;
+    color:white;
+    padding:2px;
+    font-size: 16px;
+    border: 1px solid black;
+}
+
+.aggiungiCarrello:hover{
+    cursor:pointer;
+    background-color: rgba(0, 132, 255, 0.514);
+}
+
+.user{
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.178);
+    border-radius: 10px;
+    border: 1px solid black;
+    margin: 5px;
+}
+.user p{
+    margin: 0px;
+    font-size:20px;
+}
+
+@media(max-width: 520px){
+    .user p{
+        font-size: 15px;
+    }
+}
+
+footer{
+    font-family: 'Merriweather', serif;
+    padding: 20px;
+    background-color: rgb(47, 120, 189);
+    color: white;
+    height: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+@media(max-width: 520px){
+    footer{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+#logoUNICT{
+    height: 87.5px;
+    width: 240px;
+    border-radius: 10px;
+}
+
+footer p{
+    font-size: 15px;
+    line-height: 30px;
+    text-align: center;
+    margin: 20px;
+}
+
+@media(max-width: 520px){
+    #logoUNICT{
+        height: 61px;
+        width: 168px;
+    }  
+    footer p{
+        margin: 0px;
+        font-size: 10px;
+        line-height: 20px;
+    }  
+}
+
+.hidden{
+    display: none;
+}
+#prodottiSide.hidden input, #prodottiSide.hidden .containerProdotti, #prodottiSide.hidden form, #utentiSide.hidden input, #utentiSide.hidden .containerProdotti{
+    display: none;
+}
+
+

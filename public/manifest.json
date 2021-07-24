@@ -1,0 +1,22 @@
+{
+    "short_name": "Gestione Aziende",
+    "name": "Gestione Aziende",
+    "icons": [
+      {
+        "src": "logo48.png",
+        "type": "image/png",
+        "sizes": "48x48"
+      },
+      {
+        "src": "logo144.png",
+        "type": "image/png",
+        "sizes": "144x144"
+      }
+    ],
+    "start_url": "/GestioneAziende/public",
+    "display": "fullscreen",
+    "lang": "it-IT",
+    "background_color": "#fff",
+    "theme_color": "#5bb1f9",
+    "orientation": "portrait-primary"
+  }

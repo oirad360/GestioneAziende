@@ -1,0 +1,55 @@
+body{
+    background-image: url(sfondoHeader.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display:flex;
+    align-items:center;
+    justify-content: space-around;
+    margin: 0px;
+    height: 100vh;
+    width: 100vw;
+}
+
+section{
+    font-family: 'Oxygen', sans-serif;
+    color: white;
+    text-align: center;
+    z-index: 1;
+}
+section p{
+    font-size: 40px;
+}
+#titolo{
+    font-size: 55px;
+    font-weight: 600;
+    font-style: italic;
+}
+
+#overlay{
+    position: absolute;
+    top:0px;
+    height: 100vh;
+    width:100vw;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+}
+
+main{
+    padding:20px;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    font-family: 'Raleway',sans-serif;
+    z-index: 1;
+}
+
+@media(max-width: 600px){
+    body{
+        flex-direction: column;
+    }
+}
+
+.hidden{
+    display: none;
+}

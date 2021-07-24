@@ -1,0 +1,67 @@
+section{
+    font-family: 'Raleway',sans-serif;
+    padding: 20px 18%;
+    color: black;
+    flex-grow: 1;
+}
+section .containerProdotti{
+    justify-content: center;
+}
+.bloccoInterno{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.bloccoOrizzontale{
+    display: flex;
+    align-items: flex-start;
+    font-size: 15px;
+}
+
+.schedaLaterale{
+    border-left: 3px solid rgb(100, 100, 100);
+    text-align: start;
+    width: 200px;
+    height: 100%;
+    padding-left: 8px;
+    margin-left: 5px;
+}
+#titoloRecensioni{
+    text-align: center;
+    font-style: normal;
+    font-size: 35px;
+    font-weight:700;
+}
+textarea {
+    font-size:15px;
+    resize: none;
+    height: 5em; /*em è relativo al font size, se metto width 51em vuol dire che è larga 51 caratteri*/
+    width: 51em;
+}
+.error{
+    color:red;
+}
+@media(max-width:800px){
+    .schedaLaterale{
+        font-size: 12px;
+        width: 170px;
+    }
+}
+@media(max-width:520px){
+    section{
+        padding: 20px 10%;
+    }
+    textarea{
+        font-size: 10px;
+        height: 9em;
+        width: 100%;
+    }
+    #titoloRecensioni{
+        font-size:25px;
+    }
+}
+@media(max-width:400px){
+    .schedaLaterale{
+        width: 140px;
+    }
+}
