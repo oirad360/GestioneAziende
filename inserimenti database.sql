@@ -1,3 +1,7 @@
+create database GestioneAziende;
+
+use GestioneAziende;
+
 create table azienda(
 id integer primary key auto_increment,
 nome varchar(20) not null unique,
