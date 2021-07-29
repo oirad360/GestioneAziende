@@ -31,35 +31,3 @@ function onJson(json){
 }
 
 fetch(app_url+"/home/fetchAziende").then(onResponse).then(onJson)
-chimica=9
-economia=6
-analisi1=9
-algebra=9
-fondamenti=9
-fisica1=9
-so=6
-fisica2=9
-archi=6
-tds=9
-oop=6
-elettrotecnica=9
-analisi2=9
-elettronica=9
-startup=6
-calcolatori=9
-infmus=6
-db=12
-auto=12
-cd=6
-iot=6
-//171
-M=(chimica*25+economia*30+analisi1*19+algebra*23+fondamenti*26+fisica1*27+
-    so*25+fisica2*28+archi*28+tds*27+oop*24+elettrotecnica*22+analisi2*20+elettronica*28+
-    startup*30+calcolatori*28+infmus*23+db*30+auto*24+cd*30+iot*29)/171
-console.log(M)
-P=2 //entro 3 anni, 1 entro 4
-L=1/3+1/3
-Cmax=(8/27)*M
-voto=(11/3)*M+P+L
-console.log(voto)
-console.log(Cmax)
