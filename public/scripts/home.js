@@ -55,7 +55,7 @@ iot=6
 //171
 M=(chimica*25+economia*30+analisi1*19+algebra*23+fondamenti*26+fisica1*27+
     so*25+fisica2*28+archi*28+tds*27+oop*24+elettrotecnica*22+analisi2*20+elettronica*28+
-    startup*30+calcolatori*28+infmus*23+db*30+auto*24+cd*30+iot*24)/171
+    startup*30+calcolatori*28+infmus*23+db*30+auto*24+cd*30+iot*29)/171
 console.log(M)
 P=2 //entro 3 anni, 1 entro 4
 L=1/3+1/3

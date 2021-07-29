@@ -93,7 +93,7 @@
     align-items: center;
     max-height: 500px;
     width: 300px;
-    overflow-y: auto;
+    overflow-y:auto;
     background-color: rgb(221, 221, 221);
 }
 .likeContainer .user p{
