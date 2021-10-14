@@ -175,4 +175,6 @@ fetch(app_url+"/prodotti/fetchProdotti/"+azienda,formData).then(onResponse).then
 
 const search=document.querySelector('section input') //aggiungo la funzionalità alla barra di ricerca per filtrare i contenuti tramite input testuale
 search.addEventListener('keyup', cerca)
-
+const layoutCreator=new LayoutCreator("1000px","100%")
+document.querySelector('section').appendChild(layoutCreator.layoutMenu)
+document.querySelector('section').appendChild(layoutCreator.layoutContainer)

@@ -6,10 +6,38 @@
     @parent
     <link rel='stylesheet' href="/{{$app_folder}}/public/style/sectionProdotti.css">
     <link rel='stylesheet' href="/{{$app_folder}}/public/style/containerProdotti.css">
+    <style>
+            #layoutMenu{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            #layoutMenu form{
+                display: flex;
+                flex-direction: column;
+                align-items:flex-start;
+            }
+            #layoutMenu label{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 3px;
+            }
+            #layoutMenu label input{
+                width: 20%;
+            }
+            #layoutMenu label.hidden{
+                display:none;
+            }
+            .hidden{
+                display: none;
+            }
+        </style>
 @endsection
 
 @section('scripts')
     <script src='/{{$app_folder}}/public/scripts/suggerimentiProdotti.js' defer></script>
+    <script src='/{{$app_folder}}/public/scripts/layoutCreator.js' defer></script>
     <script src='/{{$app_folder}}/public/scripts/prodotti.js' defer></script>
     @parent
 @endsection
@@ -56,4 +84,5 @@
         <div id="containerSuggerimenti" class="hidden"></div>
         <div id="text" class="hidden">Foto dai clienti</div>
     </div>
+    
 @endsection
